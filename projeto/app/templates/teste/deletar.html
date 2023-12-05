@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    
+<form method="post">
+    <section class="form container-fluid p-5x ">
+        {% csrf_token %}
+            <p> Você tem certeza que quer apagar esta reserva?</p>
+            {{ form }}
+    </section>
+   
+    <button class="btn btn-danger " type="submit"> Confirmar</button>
+        </div>
+</form>
+
+{% endblock content %}
