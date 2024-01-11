@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView, UpdateView, DeleteView, CreateView
+from django.views.generic import ListView, UpdateView, DeleteView, CreateView, DetailView
 from django.urls import reverse_lazy
 from .models import Reserva
 from .form import ReservaForm
@@ -25,5 +25,9 @@ class DeletarView(DeleteView):
     model = Reserva
     template_name = 'teste/deletar.html'
     success_url = reverse_lazy('listar')
+
+class DetalharView(DetailView):
+    model = Reserva
+    template_name = 'teste/detalhar.html'
 
 # Create your views here.

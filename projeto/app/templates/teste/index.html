@@ -3,7 +3,8 @@
   <div>
     {% for reserva in reservas %}
       <div>
-        <p>{{ reserva.nome_empresa }}</p>
+        <a href="{% url "detalhar" reserva.pk %}">{{reserva.nome_empresa }}</a>
+        <p></p>
       </div>
       <div>
         <a href="{% url 'editar' reserva.pk %}">Editar</a>

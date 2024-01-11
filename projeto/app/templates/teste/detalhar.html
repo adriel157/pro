@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>Nome:{{reserva.nome_empresa}}</p>
+<p>CNPJ:{{reserva.cnpj}}</p>
+<p>Quitado:{{reserva.quitado}}</p>
+
+
+<button><a href="{% url "listar" %}">Voltar</a></button>
+
+{% endblock content %}
+
+    

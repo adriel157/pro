@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from app.views import ListarView, CriarView, EditarView, DeletarView
+from app.views import ListarView, CriarView, EditarView, DeletarView, DetalharView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +24,5 @@ urlpatterns = [
     path('criar/', CriarView.as_view(), name='criar'),
     path('editar/<int:pk>/', EditarView.as_view(), name='editar'),
     path('deletar/<int:pk>/', DeletarView.as_view(), name='deletar'),
+    path('detalhar/<int:pk>/', DetalharView.as_view(), name='detalhar'),
 ]
